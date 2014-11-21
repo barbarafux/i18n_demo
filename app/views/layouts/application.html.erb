@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>I18nDemo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div id="container">
+		<div id="nav">
+			<%= t('language') %>:
+			<%= link_to_unless_current "English", locale: "en" %> | 
+			<%= link_to_unless_current "German" , locale: "de" %> | 
+			<%= link_to_unless_current "French" , locale: "fr" %> | 
+			<%= link_to_unless_current "Italien" , locale: "it" %> | 
+			<%= link_to_unless_current "Spanish" , locale: "es" %>
+		</div>
+	</div>
+
+<%= yield %>
+
+
+</body>
+</html>
